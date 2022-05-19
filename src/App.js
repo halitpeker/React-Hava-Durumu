@@ -39,7 +39,7 @@ function App(){
       });
       setLocation({ 
         country:data.location.country,
-        city:data.location.region,
+        city: data.location.name + "/"+ data.location.region,
         localtime:data.location.localtime
       });
       setLoading(false)
