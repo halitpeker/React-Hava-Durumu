@@ -28,9 +28,15 @@ function App(){
       })
     }
   };
+  
+  
+ useEffect(() => { 
+    getGeolocation();
+  },[])
 
-  useEffect(() => { 
-    setLoading(true);
+  useEffect(() => {  
+    if(coords!==null){
+        setLoading(true);
     const apiURL = `https://api.weatherapi.com/v1/current.json?key=636b44be2b064b04a8a83359221804&q=${coords}&aqi=no`;
     fetch(apiURL).then(res =>  res.json()).then((data) => { 
       setCurrent({
@@ -39,11 +45,13 @@ function App(){
       });
       setLocation({ 
         country:data.location.country,
-        city: data.location.name + "/"+ data.location.region,
+        city: data.location.region,
+        name: data.location.name ,
         localtime:data.location.localtime
       });
       setLoading(false)
     })
+    }
   },[coords])
 
 
@@ -59,7 +67,7 @@ function App(){
         </div>
         <div className="location">
         <div>
-          <span>{location.city}</span> / <span>{location.country}</span>
+          <span>{location.name}</span> / <span>{location.city}</span>
         </div>
         <div>
           <span className="time">{location.localtime}</span>
