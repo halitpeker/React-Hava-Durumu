@@ -77,7 +77,7 @@ function App(){
       {loading && <div className="loading"><span>Veriler Yükleniyor</span></div>}
       
      
-      <div> <br><br>br> <span className="time">Powered by haymanalix6</span></div>
+      <div> <br><br><br><br> <span className="time">Powered by haymanalix6</span></div>
       
     </div>
   );
