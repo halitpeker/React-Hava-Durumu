@@ -58,8 +58,7 @@ function App(){
 
   return (
     <div className="App">  
-      <button className="button" onClick={getGeolocation}>Hava Durumunu Göster</button>
-      {!loading  && 
+       {!loading  && 
       <div>
         <div className="weather">
           <img src={current.icon} alt="Weather" />
@@ -76,6 +75,10 @@ function App(){
       </div>
       }
       {loading && <div className="loading"><span>Veriler Yükleniyor</span></div>}
+      
+      
+      <div> <span>Powered by haymanalix6</span></div>
+      
     </div>
   );
 }
