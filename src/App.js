@@ -60,6 +60,10 @@ function App(){
     <div className="App">  
        {!loading  && 
       <div>
+        <div>
+          <span className="time">Hüdo başkan hava {current.temp} derece</span>
+        </div>
+    
         <div className="weather">
           <img src={current.icon} alt="Weather" />
           <span>{current.temp}</span>
