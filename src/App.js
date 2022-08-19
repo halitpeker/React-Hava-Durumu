@@ -61,7 +61,7 @@ function App(){
        {!loading  && 
       <div>
         <div>
-          <span className="time">Hüdo başkan hava {current.temp} derece</span>
+          <span className="time">Hava {current.temp} derece</span>
         </div>
     
         <div className="weather">
